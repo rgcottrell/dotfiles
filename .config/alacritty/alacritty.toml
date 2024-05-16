@@ -13,7 +13,9 @@ size = 19
 blur = true
 decorations = "Full"
 decorations_theme_variant = "Dark"
+dimensions = { columns = 120, lines = 40 }
 dynamic_title = true
 opacity = 0.9
 option_as_alt = "OnlyRight"
 padding = { x = 0, y = 0 }
+resize_increments = true
