@@ -13,7 +13,7 @@ cd ~
 git clone git@github.com:rgcottrell/dotfiles.git .dotfiles
 ```
 
-Then use GNU ´stow´ to symlink the files to your home directory:
+Then use GNU `stow` to symlink the files to your home directory:
 
 ```bash
 cd ~/.dotfiles
@@ -22,10 +22,12 @@ stow .
 
 ## Requirements
 
+### CLI tools
+
 This repository assumes that you have various tools installed on your system.
 The following is a list of tools that are assumed to be installed:
 
-- [alacritty](https://alacritty.org/)
+- [anaconda](https://www.anaconda.com/download)
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
@@ -37,13 +39,13 @@ The following is a list of tools that are assumed to be installed:
 - [tmux](https://github.com/tmux/tmux)
 - [zellij](https://zellij.dev/)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [zsh-syntax-highlighting](https://eithub.com/zsh-users/zsh-syntax-highlighting)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 
-These can be install using `brew` on macOS:
+These can be installed using `brew` on macOS:
 
 ```bash
-brew install alacritty
+brew install --cask anaconda
 brew install bat
 brew install fd
 brew install fzf
@@ -57,4 +59,36 @@ brew install zellij
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install zoxide
+```
+
+### Terminals
+
+These tools work best with a modern terminal. I like the simplicity of `Alacritty`
+but there are several alternatives that also work well.
+
+- [Alacritty](https://alacritty.org/)
+- [iTerm2](https://iterm2.com/)
+- [Warp](https://docs.warp.dev/)
+- [Wezterm](https://wezfurlong.org/wezterm)
+
+Terminals can be install using `brew` on macOS.
+
+```bash
+brew install --cask alacritty
+brew install --cask iterm2
+brew install --cask warp
+brew install --cask wezterm
+```
+
+### Nerd Fonts
+
+To make the best use of these tools, a [Nerd Font](https://www.nerdfonts.com/)
+should be installed as the as the default font for the terminal. This will
+allow special symbols to be displayed on the screen.
+
+Nerd Fonts can be installed using `brew` on macOS. There are several fonts
+available, but I like the `Hack Nerd Font`.
+
+```bash
+brew install --cask font-hack-nerd-font
 ```
