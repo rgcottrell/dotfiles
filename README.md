@@ -38,9 +38,9 @@ The following is a list of tools that are assumed to be installed:
 - [stow](https://www.gnu.org/software/stow)
 - [tmux](https://github.com/tmux/tmux)
 - [zellij](https://zellij.dev/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://eithub.com/zsh-users/zsh-syntax-highlighting)
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 These can be installed using `brew` on macOS:
 
@@ -56,9 +56,9 @@ brew install starship
 brew install stow
 brew install tmux
 brew install zellij
+brew install zoxide
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
-brew install zoxide
 ```
 
 ### Terminals
