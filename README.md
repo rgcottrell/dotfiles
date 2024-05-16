@@ -27,6 +27,7 @@ The following is a list of tools that are assumed to be installed:
 
 - [alacritty](https://alacritty.org/)
 - [bat](https://github.com/sharkdp/bat)
+- [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [neovim](https://neovim.io/)
@@ -44,6 +45,7 @@ These can be install using `brew` on macOS:
 ```bash
 brew install alacritty
 brew install bat
+brew install fd
 brew install fzf
 brew install lsd
 brew install neovim
