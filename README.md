@@ -20,3 +20,39 @@ cd ~/.dotfiles
 stow .
 ```
 
+## Requirements
+
+This repository assumes that you have various tools installed on your system.
+The following is a list of tools that are assumed to be installed:
+
+- [alacritty](https://alacritty.org/)
+- [bat](https://github.com/sharkdp/bat)
+- [fzf](https://github.com/junegunn/fzf)
+- [lsd](https://github.com/lsd-rs/lsd)
+- [neovim](https://neovim.io/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [starship](https://starship.rs/)
+- [stow](https://www.gnu.org/software/stow)
+- [tmux](https://github.com/tmux/tmux)
+- [zellij](https://zellij.dev/)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+These can be install using `brew` on macOS:
+
+```bash
+brew install alacritty
+brew install bat
+brew install fzf
+brew install lsd
+brew install neovim
+brew install ripgrep
+brew install starship
+brew install stow
+brew install tmux
+brew install zellij
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+brew install zoxide
+```
