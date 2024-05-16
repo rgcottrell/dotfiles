@@ -29,3 +29,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+conda config --set changeps1 False

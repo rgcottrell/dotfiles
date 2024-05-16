@@ -67,7 +67,7 @@ These tools work best with a modern terminal. I like the simplicity of `Alacritt
 but there are several alternatives that also work well.
 
 - [Alacritty](https://alacritty.org/)
-- [iTerm2](https://iterm2.com/)
+- [Kitty](https://sw.kovidgoyal.net/kitty)
 - [Warp](https://docs.warp.dev/)
 - [Wezterm](https://wezfurlong.org/wezterm)
 
@@ -75,7 +75,7 @@ Terminals can be install using `brew` on macOS.
 
 ```bash
 brew install --cask alacritty
-brew install --cask iterm2
+brew install --cask kitty
 brew install --cask warp
 brew install --cask wezterm
 ```
@@ -84,10 +84,10 @@ brew install --cask wezterm
 
 To make the best use of these tools, a [Nerd Font](https://www.nerdfonts.com/)
 should be installed as the as the default font for the terminal. This will
-allow special symbols to be displayed on the screen.
-
-Nerd Fonts can be installed using `brew` on macOS. There are several fonts
+allow special symbols to be displayed on the screen. There are several fonts
 available, but I like the `Hack Nerd Font`.
+
+Nerd Fonts can be installed using `brew` on macOS.
 
 ```bash
 brew install --cask font-hack-nerd-font
