@@ -36,6 +36,7 @@ The following is a list of tools that are assumed to be installed:
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [starship](https://starship.rs/)
 - [stow](https://www.gnu.org/software/stow)
+- [tldr](https://tldr.sh/)
 - [tmux](https://github.com/tmux/tmux)
 - [zellij](https://zellij.dev/)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
@@ -54,6 +55,7 @@ brew install neovim
 brew install ripgrep
 brew install starship
 brew install stow
+brew install tlrc
 brew install tmux
 brew install zellij
 brew install zoxide
