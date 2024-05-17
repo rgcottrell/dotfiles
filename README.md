@@ -31,6 +31,7 @@ The following is a list of tools that are assumed to be installed:
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
+- [jq](https://jqlang.github.io/jq/)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [neovim](https://neovim.io/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -40,6 +41,7 @@ The following is a list of tools that are assumed to be installed:
 - [tmux](https://github.com/tmux/tmux)
 - [zellij](https://zellij.dev/)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://eithub.com/zsh-users/zsh-syntax-highlighting)
 
@@ -50,6 +52,7 @@ brew install --cask anaconda
 brew install bat
 brew install fd
 brew install fzf
+brew install jq
 brew install lsd
 brew install neovim
 brew install ripgrep
@@ -59,6 +62,7 @@ brew install tlrc
 brew install tmux
 brew install zellij
 brew install zoxide
+brew install zsh-autocomplete
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 ```
