@@ -1,7 +1,5 @@
 export EDITOR="nvim"
 
-alias cat="bat"
-
 alias cd="z"
 
 alias ls="lsd"
@@ -13,9 +11,9 @@ eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -33,3 +31,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 conda config --set changeps1 False
+
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' delay 0.5
