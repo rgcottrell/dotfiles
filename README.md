@@ -32,6 +32,7 @@ The following is a list of tools that are assumed to be installed:
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
 - [jq](https://jqlang.github.io/jq/)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [neovim](https://neovim.io/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -53,6 +54,7 @@ brew install bat
 brew install fd
 brew install fzf
 brew install jq
+brew install lazygit
 brew install lsd
 brew install neovim
 brew install ripgrep
