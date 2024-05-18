@@ -1,5 +1,7 @@
 export EDITOR="nvim"
 
+alias cat="bat"
+
 alias cd="z"
 
 alias ls="lsd"
