@@ -31,6 +31,7 @@ The following is a list of tools that are assumed to be installed:
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
+- [glow](https://github.com/charmbracelet/glow)
 - [jq](https://jqlang.github.io/jq/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [lsd](https://github.com/lsd-rs/lsd)
@@ -53,6 +54,7 @@ brew install --cask anaconda
 brew install bat
 brew install fd
 brew install fzf
+brew install glow
 brew install jq
 brew install lazygit
 brew install lsd
