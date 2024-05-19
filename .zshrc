@@ -1,32 +1,57 @@
-export EDITOR="nvim"
+if command -v fzf >/dev/null 2>&1; then
+    eval "$(fzf --zsh)"
+    if [[ -n "$TMUX" ]]; then
+        alias fzf="fzf-tmux"
+    fi
+fi
 
-alias cd="z"
-
-alias ls="lsd"
-alias la="ls -a"
-alias ll="ls -l"
-alias lla="ls -la"
-
-eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-# >>> GitHub CLI >>>
-if command -v gh &> /dev/null; then
+if command -v gh >/dev/null 2>1; then
     eval "$(gh copilot alias -- zsh)"
 fi
-# <<< GitHub CLI <<<
+
+if command -v lsd >/dev/null 2>&1; then
+    alias ls="lsd"
+    alias la="ls -a"
+    alias ll="ls -l"
+    alias lla="ls -la"
+fi
+
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR="nvim"
+    export VISUAL="nvim"
+    alias vi="nvim"
+    alias vim="nvim"
+fi
+
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init zsh)"
+    alias cd="z"
+fi
+
+if [ -f "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh" ]; then
+    source "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+    zstyle ':autocomplete:*' min-input 3
+    zstyle ':autocomplete:*' delay 0.5
+fi
+
+if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+    source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+    source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 # >>> Google Cloud SDK >>>
 if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
-    source $(brew --prefix)/share/google-cloud-sdk/path.zsh.inc
+    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 fi
 if [ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]; then
-    source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
+    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 # <<< Google Cloud SDK <<<
 
@@ -55,7 +80,3 @@ unset __conda_setup
 # Disable conda's default behavior of changing the PS1 in the shell so that it can be
 # managed by starship.
 conda config --set changeps1 False
-
-# Make zsh-autocomplete suggestion less intrusive.
-zstyle ':autocomplete:*' min-input 3
-zstyle ':autocomplete:*' delay 0.5
