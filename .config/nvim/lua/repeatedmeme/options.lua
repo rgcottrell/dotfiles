@@ -22,8 +22,8 @@ vim.opt.cursorline = true
 
 -- turn on termguicolors for color schemes
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.opt.signcolumn = "yes"
+vim.opt.background = 'dark'
+vim.opt.signcolumn = 'yes'
 
 -- turn off swapfile
 vim.opt.swapfile = false
