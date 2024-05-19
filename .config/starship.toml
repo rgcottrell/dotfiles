@@ -14,17 +14,15 @@ $c\
 $rust\
 $golang\
 $nodejs\
-$php\
 $java\
 $kotlin\
-$haskell\
 $python\
 $conda\
 [](fg:teal bg:blue)\
 $docker_context\
 [](fg:blue bg:purple)\
 $time\
-[ ](fg:purple)\
+[](fg:purple)\
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -130,11 +128,6 @@ symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
-[php]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
 [java]
 symbol = " "
 style = "bg:teal"
@@ -142,11 +135,6 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[haskell]
-symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
