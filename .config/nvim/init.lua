@@ -1,5 +1,5 @@
-require("repeatedmeme.options")
-require("repeatedmeme.keymaps")
+require("options")
+require("keymaps")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -15,8 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = "repeatedmeme.plugins" },
-  { import = "repeatedmeme.plugins.lsp" }
+  { import = "plugins" },
+  { import = "plugins.lsp" }
 }, {
   checker = {
     enabled = true,
