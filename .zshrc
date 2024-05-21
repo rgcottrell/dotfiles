@@ -5,7 +5,7 @@ if command -v fzf >/dev/null 2>&1; then
     fi
 fi
 
-if command -v gh >/dev/null 2>1; then
+if command -v gh >/dev/null 2>&1; then
     eval "$(gh copilot alias -- zsh)"
 fi
 
@@ -77,6 +77,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Disable conda's default behavior of changing the PS1 in the shell so that it can be
-# managed by starship.
-conda config --set changeps1 False
+if command -v conda >/dev/null 2>&1; then
+    # Disable conda's default behavior of changing the PS1 in the shell so that
+    # it can be managed by starship.
+    conda config --set changeps1 False
+
+    # If running in TMUX, deactivate all conda environments and then reactivate
+    # the base environmant to avoid issues with conda's shell hooks.
+    if [[ -n "$TMUX" ]]; then
+        for i in $(seq ${CONDA_SHLVL}); do
+            conda deactivate
+        done
+        conda activate base
+    fi
+fi
