@@ -31,6 +31,7 @@ The following is a list of tools that are assumed to be installed:
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
+- [gh](https://github.com/cli/cli)
 - [glow](https://github.com/charmbracelet/glow)
 - [jq](https://jqlang.github.io/jq/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
@@ -54,6 +55,7 @@ brew install --cask anaconda
 brew install bat
 brew install fd
 brew install fzf
+brew install gh
 brew install glow
 brew install jq
 brew install lazygit
@@ -90,6 +92,10 @@ brew install --cask warp
 brew install --cask wezterm
 ```
 
+Terminals are not available from `brew` on Linux or WSL. To install an alternate
+terminal, go to the terminal's project page and follow the installation
+instructions.
+
 ### Nerd Fonts
 
 To make the best use of these tools, a [Nerd Font](https://www.nerdfonts.com/)
@@ -102,3 +108,28 @@ Nerd Fonts can be installed using `brew` on macOS.
 ```bash
 brew install --cask font-hack-nerd-font
 ```
+
+Nerd Fonts are not available from ´brew´ on Linux or WSL. To install a Nerd Font
+on Windows, go to the [Nerd Font Downloads](https://www.nerdfonts.com/font-downloads)
+page and download your preferred font. Open the font files to install. Finally, set
+the font as the default font from the terminal settings.
+
+### GitHub Copilot Setup
+
+Copilot can be enabled from the GitHub CLI.
+
+```bash
+gh auth login
+gh extension install github/gh-copilot
+
+```
+
+### Tmux Setup
+
+To initialize the tmux plugin manager, clone the manager into the tmux plugins
+directory:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+

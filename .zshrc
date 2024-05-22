@@ -37,25 +37,25 @@ if command -v zoxide >/dev/null 2>&1; then
 fi
 
 if [ -f "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh" ]; then
-    source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+    . "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
     zstyle ':autocomplete:*' min-input 3
     zstyle ':autocomplete:*' delay 0.5
 fi
 
 if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-    source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    . "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
 if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-    source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+    . "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 # >>> Google Cloud SDK >>>
 if [ -f "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc" ]; then
-    source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
+    . "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
 fi
 if [ -f "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc" ]; then
-    source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+    . "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
 fi
 # <<< Google Cloud SDK <<<
 
