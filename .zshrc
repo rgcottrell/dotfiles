@@ -1,8 +1,3 @@
-# Initialize brew on Linux and WSL. On macOS, brew is initialized in .zprofile.
-if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 if command -v fzf >/dev/null 2>&1; then
     eval "$(fzf --zsh)"
     if [[ -n "$TMUX" ]]; then
@@ -74,4 +69,8 @@ if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
         done
     fi
     conda activate base
+fi
+
+if [ -f "$HOME/.zshrc.local" ]; then
+    . "$HOME/.zshrc.local"
 fi
