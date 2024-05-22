@@ -68,7 +68,6 @@ if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
             conda deactivate
         done
     fi
-    conda activate base
 fi
 
 if [ -f "$HOME/.zshrc.local" ]; then
