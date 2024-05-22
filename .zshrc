@@ -1,3 +1,4 @@
+# Initialize brew on Linux and WSL. On macOS, brew is initialized in .zprofile.
 if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
@@ -62,21 +63,15 @@ if [ -d "$HOME/.modular" ]; then
     export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 fi
 
-for CONDA_PREFIX in \
-    "$HOMEBREW_PREFIX/anaconda3" \
-    "$HOME/anaconda3"; \
-do
-    if [ -f "$CONDA_PREFIX/etc/profile.d/conda.sh" ]; then
-        . "$CONDA_PREFIX/etc/profile.d/conda.sh"
+if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+    . "$HOME/anaconda3/etc/profile.d/conda.sh"
 
-        # If running in TMUX, deactivate all conda environments and then reactivate
-        # the base environmant to avoid issues with conda's shell hooks.
-        if [[ -n "$TMUX" ]]; then
-            for i in $(seq ${CONDA_SHLVL}); do
-                conda deactivate
-            done
-        fi
-        conda activate base
+    # If running in TMUX, deactivate all conda environments and then reactivate
+    # the base environmant to avoid issues with conda's shell hooks.
+    if [[ -n "$TMUX" ]]; then
+        for i in $(seq ${CONDA_SHLVL}); do
+            conda deactivate
+        done
     fi
-done
-
+    conda activate base
+fi

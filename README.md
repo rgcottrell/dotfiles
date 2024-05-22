@@ -27,7 +27,6 @@ stow .
 This repository assumes that you have various tools installed on your system.
 The following is a list of tools that are assumed to be installed:
 
-- [anaconda](https://www.anaconda.com/download)
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
@@ -48,10 +47,9 @@ The following is a list of tools that are assumed to be installed:
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://eithub.com/zsh-users/zsh-syntax-highlighting)
 
-These can be installed using `brew` on macOS:
+These can be installed using `brew`:
 
 ```bash
-brew install --cask anaconda
 brew install bat
 brew install fd
 brew install fzf
@@ -114,16 +112,6 @@ on Windows, go to the [Nerd Font Downloads](https://www.nerdfonts.com/font-downl
 page and download your preferred font. Open the font files to install. Finally, set
 the font as the default font from the terminal settings.
 
-### GitHub Copilot Setup
-
-Copilot can be enabled from the GitHub CLI.
-
-```bash
-gh auth login
-gh extension install github/gh-copilot
-
-```
-
 ### Tmux Setup
 
 To initialize the tmux plugin manager, clone the manager into the tmux plugins
@@ -141,3 +129,34 @@ To install Rust, run the following command:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+### Anaconda Setup
+
+Anaconda is available from `brew` on macOS, but it is recommended to install
+Anaconda from the [Anaconda website](https://www.anaconda.com/products/distribution).
+
+On macOS, install using:
+
+```bash
+curl -O https://repo.anaconda.com/archive/Anaconda3-2024.02-1-MacOSX-arm64.sh
+bash Anaconda3-2024.02-1-MacOSX-arm64.sh
+```
+
+On Linux or WSL, install using:
+
+```bash
+curl -O https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+bash Anaconda3-2024.02-1-Linux-x86_64.sh
+```
+
+Accept the default location in the home directory, but do not modify the shell
+scripts. The included `.zshrc` file will initialize Anaconda in the shell.
+
+### GitHub Copilot CLI Setup
+
+Copilot can be installed from the GitHub CLI:
+
+```bash
+gh auth login
+gh extension install github/gh-copilot
+
+```
