@@ -1,3 +1,7 @@
+if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 if command -v fzf >/dev/null 2>&1; then
     eval "$(fzf --zsh)"
     if [[ -n "$TMUX" ]]; then
