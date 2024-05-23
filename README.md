@@ -13,11 +13,19 @@ cd ~
 git clone git@github.com:rgcottrell/dotfiles.git .dotfiles
 ```
 
-Then use GNU `stow` to symlink the files to your home directory:
+Then use GNU `stow` to symlink the files to your home directory. Each project
+has its own directory in the repo, and `stow` can be used to symlink the files
+on a per-project basis.
 
 ```bash
 cd ~/.dotfiles
-stow .
+stow alacritty
+stow bat
+stow nvim
+stow starship
+stow tmux
+stow wezterm
+stow zsh
 ```
 
 ## Requirements
