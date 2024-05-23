@@ -9,7 +9,6 @@ do
     fi
 done
 
-
 if [ -f "$HOME/.cargo/env" ]; then
     . "$HOME/.cargo/env"
 fi
