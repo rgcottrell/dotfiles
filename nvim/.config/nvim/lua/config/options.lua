@@ -1,11 +1,15 @@
+-- Set <space> as the leader key
+vim.g.mapleader = " "
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- tabs and indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 
 -- line wrapping
