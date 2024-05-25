@@ -1,8 +1,14 @@
 return {
   "hrsh7th/nvim-cmp",
+  dependencies = {
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-path",
+    "saadparwaiz1/cmp_luasnip",
+    "zbirenbaum/copilot-cmp",
+    "L3MON4D3/LuaSnip",
+  },
   config = function()
-    require("luasnip.loaders.from_vscode").lazy_load()
-
     local cmp = require("cmp")
     cmp.setup({
       snippet = {
@@ -25,8 +31,8 @@ return {
         { name = "copilot" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
-      }, {
         { name = "buffer" },
+        { name = "path" },
       }),
     })
   end,

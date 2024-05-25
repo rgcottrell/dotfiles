@@ -18,6 +18,7 @@ return {
     telescope.load_extension("ui-select")
 
     local builtin = require("telescope.builtin")
+    vim.keymap.set("n", "<Leader>s:", builtin.command_history, { desc = "Search recent commands" })
     vim.keymap.set("n", "<Leader>sh", builtin.help_tags, { desc = "Search help" })
     vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "Search keymaps" })
     vim.keymap.set("n", "<Leader>sf", builtin.find_files, { desc = "Search files" })

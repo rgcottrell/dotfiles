@@ -19,13 +19,8 @@ return {
           enable = true,
         },
       },
-      source_selector = {
-        winbar = true,
-      },
     })
 
-    vim.keymap.set("n", "<Leader>eb", "<Cmd>Neotree buffers reveal<CR>", { desc = "[E]xplore [B]uffer" })
     vim.keymap.set("n", "<Leader>ef", "<Cmd>Neotree filesystem reveal<CR>", { desc = "[E]xplore [F]iles" })
-    vim.keymap.set("n", "<Leader>eg", "<Cmd>Neotree git_status reveal<CR>", { desc = "[E]xplore [G]it Status" })
   end,
 }
