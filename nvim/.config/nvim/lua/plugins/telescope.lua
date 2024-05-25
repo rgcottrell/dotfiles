@@ -18,19 +18,18 @@ return {
     telescope.load_extension("ui-select")
 
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<Leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
-    vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-    vim.keymap.set("n", "<Leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-    vim.keymap.set("n", "<Leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
-    vim.keymap.set("n", "<Leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-    vim.keymap.set("n", "<Leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
-    vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-    vim.keymap.set("n", "<Leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
-    vim.keymap.set("n", "<Leader>s.", builtin.oldfiles, { desc = "[S]earch Recent Files (\".\" for repeat)" })
-    vim.keymap.set("n", "<Leader>sb", builtin.buffers, { desc = "[S]earch [B]uffers" })
-
+    vim.keymap.set("n", "<Leader>sh", builtin.help_tags, { desc = "Search help" })
+    vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "Search keymaps" })
+    vim.keymap.set("n", "<Leader>sf", builtin.find_files, { desc = "Search files" })
+    vim.keymap.set("n", "<Leader>ss", builtin.builtin, { desc = "Search telescope builtins" })
+    vim.keymap.set("n", "<Leader>sw", builtin.grep_string, { desc = "Search current word" })
+    vim.keymap.set("n", "<Leader>sg", builtin.live_grep, { desc = "Search by grep" })
+    vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "Search diagnostics" })
+    vim.keymap.set("n", "<Leader>sr", builtin.resume, { desc = "Search resume" })
+    vim.keymap.set("n", "<Leader>s.", builtin.oldfiles, { desc = "Search recent files" })
+    vim.keymap.set("n", "<Leader>sb", builtin.buffers, { desc = "Search buffers" })
     vim.keymap.set("n", "<Leader>sc", function()
-      builtin.find_files { cwd = vim.fn.stdpath("config")}
-    end, { desc = "[S]earch [C]onfig Files" })
+      builtin.find_files({ cwd = vim.fn.stdpath("config")})
+    end, { desc = "Search nvim config files" })
   end,
 }

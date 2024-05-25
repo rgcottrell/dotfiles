@@ -1,3 +1,5 @@
+require("config.options")
+require("config.keymaps")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -12,6 +14,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("config.options")
-require("config.keymaps")
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  change_detection = {
+    notify = false,
+  },
+  checker = {
+    enable = true,
+    notify = false,
+  },
+})
