@@ -10,7 +10,7 @@ return {
         "dockerls", -- Docker
         "eslint", -- ESLint
         "gopls", -- Go
-        "html", -- HTML 
+        "html", -- HTML
         "jsonls", -- JSON
         "lemminx", -- XML
         "lua_ls", -- Lua

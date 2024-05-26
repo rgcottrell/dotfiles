@@ -29,9 +29,9 @@ return {
         telescope = true,
         treesitter = true,
         which_key = true,
-      }
+      },
     })
 
-    vim.cmd.colorscheme "catppuccin-mocha"
+    vim.cmd.colorscheme("catppuccin-mocha")
   end,
 }

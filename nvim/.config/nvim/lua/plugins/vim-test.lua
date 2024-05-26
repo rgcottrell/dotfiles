@@ -1,7 +1,7 @@
 return {
   "vim-test/vim-test",
   dependencies = {
-    "preservim/vimux"
+    "preservim/vimux",
   },
   config = function()
     vim.keymap.set("n", "<Leader>tt", ":TestNearest<CR>", { desc = "Run Nearest Test" })

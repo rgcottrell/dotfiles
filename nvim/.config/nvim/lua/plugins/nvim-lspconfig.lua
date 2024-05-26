@@ -2,27 +2,27 @@ return {
   "neovim/nvim-lspconfig",
   lazy = false,
   config = function()
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local lspconfig = require("lspconfig")
     lspconfig.tsserver.setup({
-      capabilities = capabilities
+      capabilities = capabilities,
     })
     lspconfig.html.setup({
-      capabilities = capabilities
+      capabilities = capabilities,
     })
     lspconfig.lua_ls.setup({
       settings = {
         Lua = {
           diagnostics = {
-            globals = {"vim"}
-          }
-        }
+            globals = { "vim" },
+          },
+        },
       },
-      capabilities = capabilities
+      capabilities = capabilities,
     })
     lspconfig.solargraph.setup({
-      capabilities = capabilities
+      capabilities = capabilities,
     })
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -30,6 +30,6 @@ return {
     vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
     vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
     vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.code_action, {})
-    vim.keymap.set('n', '<Space>rn', vim.lsp.buf.rename, {})
+    vim.keymap.set("n", "<Space>rn", vim.lsp.buf.rename, {})
   end,
 }

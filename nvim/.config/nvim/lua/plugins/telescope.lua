@@ -30,7 +30,7 @@ return {
     vim.keymap.set("n", "<Leader>s.", builtin.oldfiles, { desc = "Search recent files" })
     vim.keymap.set("n", "<Leader>sb", builtin.buffers, { desc = "Search buffers" })
     vim.keymap.set("n", "<Leader>sc", function()
-      builtin.find_files({ cwd = vim.fn.stdpath("config")})
+      builtin.find_files({ cwd = vim.fn.stdpath("config") })
     end, { desc = "Search nvim config files" })
   end,
 }
