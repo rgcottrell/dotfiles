@@ -2,6 +2,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Disable netrw plugin
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+
+-- Limit number of completion suggestions
+vim.opt.pumheight = 10
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
