@@ -21,7 +21,7 @@ return {
       },
       capabilities = capabilities,
     })
-    lspconfig.solargraph.setup({
+    lspconfig.zls.setup({
       capabilities = capabilities,
     })
 

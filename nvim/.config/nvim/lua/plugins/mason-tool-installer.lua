@@ -8,6 +8,7 @@ return {
         "stylua",
         "pylint",
         "eslint",
+        "zls",
       },
     })
   end,

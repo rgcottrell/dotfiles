@@ -26,6 +26,7 @@ return {
         "typescript",
         "xml",
         "yaml",
+        "zig",
       },
       auto_install = true,
       highlight = { enable = true },

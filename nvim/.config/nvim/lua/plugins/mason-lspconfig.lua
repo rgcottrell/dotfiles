@@ -21,6 +21,7 @@ return {
         "taplo", -- TOML
         "tsserver", -- TypeScript
         "yamlls", -- YAML
+        "zls", -- Zig
       },
       automatic_installation = true,
     })
