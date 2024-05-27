@@ -22,4 +22,10 @@ require("lazy").setup("plugins", {
     enable = true,
     notify = false,
   },
+  install = {
+    colorscheme = { "catppuccin" },
+  },
+  ui = {
+    border = "rounded",
+  },
 })
