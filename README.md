@@ -25,6 +25,7 @@ stow nvim
 stow starship
 stow tmux
 stow wezterm
+stow zed
 stow zsh
 ```
 
