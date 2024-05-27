@@ -32,12 +32,6 @@ if command -v zoxide >/dev/null 2>&1; then
     alias cd="z"
 fi
 
-#if [ -f "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh" ]; then
-#    . "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
-#    zstyle ':autocomplete:*' min-input 3
-#    zstyle ':autocomplete:*' delay 0.5
-#fi
-
 if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
     . "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi

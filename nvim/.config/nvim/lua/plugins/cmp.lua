@@ -40,6 +40,7 @@ return {
           s = cmp.mapping.confirm({ select = true }),
           c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehaviorReplace, select = true }),
         }),
+        ["<Esc>"] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
@@ -92,3 +93,4 @@ return {
     })
   end,
 }
+
