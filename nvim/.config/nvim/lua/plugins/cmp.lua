@@ -18,7 +18,7 @@ return {
 
     cmp.setup({
       completion = {
-        completeopt = "menu,menuone,noselect",
+        autocomplete = false,
       },
       mapping = cmp.mapping.preset.insert({
         ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -28,14 +28,37 @@ return {
         ["<C-y>"] = cmp.mapping.confirm({ select = true }),
         ["<C-e>"] = cmp.mapping.abort(),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-l>"] = cmp.mapping(function()
-          if luasnip.expand_or_locally_jumpable() then
-            luasnip.expand_or_jump()
+        ["<CR>"] = cmp.mapping({
+          i = function(fallback)
+            if cmp.visible() and cmp.get_active_entry() then
+              if luasnip.expandable() then
+                luasnip.expand()
+              else
+                cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+              end
+            else
+              fallback()
+            end
+          end,
+          s = cmp.mapping.confirm({ select = true }),
+          c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+        }),
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expand_or_locally_jumpable() then
+            luasnip.jump(1)
+          else
+            fallback()
           end
         end, {"i", "s" }),
-        ["<C-h>"] = cmp.mapping(function()
-          if luasnip.locally_jumpable(-1) then
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
+          else
+            fallback()
           end
         end, { "i", "s" }),
       }),
