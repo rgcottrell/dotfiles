@@ -3,6 +3,7 @@ return {
   lazy = false,
   config = function()
     require("mason-lspconfig").setup({
+      -- Rust is configured automatically by the rustacean plugin.
       ensure_installed = {
         "bashls", -- Bash
         "clangd", -- C/C++
@@ -15,7 +16,6 @@ return {
         "lemminx", -- XML
         "lua_ls", -- Lua
         "pyright", -- Python
-        "rust_analyzer", -- Rust
         "spectral", -- OpenAPI
         "tailwindcss", -- Tailwind CSS
         "taplo", -- TOML

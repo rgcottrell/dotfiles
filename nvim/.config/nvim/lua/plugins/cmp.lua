@@ -8,6 +8,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
+    "saecki/crates.nvim",
     "windwp/nvim-autopairs",
     "zbirenbaum/copilot-cmp",
     "L3MON4D3/LuaSnip",
@@ -70,6 +71,7 @@ return {
       sources = cmp.config.sources({
         { name = "copilot" },
         { name = "nvim_lsp" },
+        { name = "crates" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
