@@ -4,11 +4,11 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         "codelldb",
-        "prettier",
+        "eslint",
         "eslint_d",
         "stylua",
+        "prettier",
         "pylint",
-        "eslint",
         "zls",
       },
     })

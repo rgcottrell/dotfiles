@@ -17,20 +17,30 @@ return {
         "json",
         "kotlin",
         "lua",
+        "luadoc",
         "markdown",
+        "printf",
         "python",
         "regex",
         "rust",
         "swift",
         "toml",
         "typescript",
+        "vim",
+        "vimdoc",
         "xml",
         "yaml",
         "zig",
       },
       auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
+      sync_install = true,
+      ignore_install = {},
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true
+      },
     })
   end,
 }
