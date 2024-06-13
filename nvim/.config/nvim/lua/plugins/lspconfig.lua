@@ -18,6 +18,9 @@ return {
     lspconfig.dockerls.setup({
       capabilities = capabilities,
     })
+    lspconfig.gopls.setup({
+      capabilities = capabilities,
+    })
     lspconfig.html.setup({
       capabilities = capabilities,
     })
